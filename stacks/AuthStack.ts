@@ -7,6 +7,7 @@ export function AuthStack({ stack, app }: StackContext) {
     const { api } = use(ApiStack);
     const { bucket } = use(StorageStack);
 
+
     // Create a Cognito User Pool and Identity Pool
     const auth = new Cognito(stack, "Auth", {
         login: ["email"],
